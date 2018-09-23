@@ -20,17 +20,18 @@
             <nav class="verdeClaro">
               <div class="nav-wrapper">
                 <div class="col s12">
-                  <a href="#!" class="breadcrumb">Home</a>
+                  <a href="index.jsp" class="breadcrumb">Home</a>
                   <a href="#!" class="breadcrumb">Login</a>
                 </div>
               </div>
             </nav>
-            <div class="center-align">
-                <div class="boxLogin z-depth-5 center-align">
-                    <h6><strong>Efetue login para anunciar!</strong></h6>
-                    <img src="Assets/userDeafult.png" alt="" class="circle limitWidth">
-                    <div class="row">
-                        <form class="col s12">
+                <div class="boxLogin z-depth-5 ">
+                    <h6 class="center-align"><strong>Efetue login para anunciar!</strong></h6>
+                    <div class="center-align">
+                        <img src="Assets/userDeafult.png " alt="" class="circle limitWidth ">
+                    </div>
+                    <div class="row container">
+                        <form class="col s12" id="form1">
                             <div class="row">
                                 <div class="input-field col s12">
                                   <input id="email" type="email" class="validate">
@@ -42,11 +43,17 @@
                                   <input id="senha" type="email" class="validate">
                                   <label for="senha">Senha</label>
                                 </div>
+                             </div>
+                            <div class="right">
+                                <button class="btn waves-effect waves-light verdeClaro" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
                             </div>
+                            <p class="pdLeft"><a href="cadastro.jsp">Não possui cadastro?</a></p>
                         </form>
+                        
                     </div>
                 </div>
-            </div>
         </div>
         <script src="Assets/js/materialize.js"></script>
     </body>

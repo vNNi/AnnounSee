@@ -13,6 +13,12 @@ and open the template in the editor.
 .verdeEscuro{
     background-color: #388e3c;
 }
+.verdeEscuro:visited{
+    background-color: #388e3c;
+}
+.verdeEscuro:hover{
+    background-color: #388e3c;
+}
 .verdeClaro{
     background-color: #66bb6a;
 }
@@ -81,10 +87,24 @@ h4{
 }
 .boxLogin{
     width: 50%;
-    background-color: #eeeeee;
+    background-color: white;
     margin: 0 auto;
 }
 .boxLogin h6{
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    font-family: "Roboto", sans-serif;
+    color:grey;
+}
+.pdLeft{
+   margin-left:1.0em;
+}
+.pdLeft a {
+  color:#66bb6a;
+}
+#form1{
+    margin-bottom: 2em;
+}
+.map{
+    margin-top:1em;
 }
