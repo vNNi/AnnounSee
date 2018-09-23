@@ -1,0 +1,90 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23/09/2018, 14:33:17
+    Author     : Vinic
+*/
+
+
+/*CORES PADRÕES*/
+.verdeEscuro{
+    background-color: #388e3c;
+}
+.verdeClaro{
+    background-color: #66bb6a;
+}
+/*CORES */
+section{
+    background-color: white;
+}
+
+.off-setRight{
+    margin-right: 5em;
+}
+.off-setLeft{
+    margin-left: 5em;
+}
+.banner{
+    height: 440px;
+    background-image: url(banner.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h3{
+    color: white;
+}
+.resetMargin{
+    margin-top: 0;
+}
+
+.fundoBanner{
+    background-color: rgba(0,0,0,0.4);
+    width: 45%;
+    padding:0.5em;
+}
+.hrColor{
+   color:#66bb6a;
+}
+.textColorDarkGreen{
+    color:#388e3c
+}
+#fixedbutton{
+    position: fixed;
+    margin-bottom: 2em;
+}
+#fixedbutton:visited{
+    background-color: #388e3c;
+}
+#fixedbutton:hover{
+    background-color: #66bb6a;
+}
+.page-footer{
+    background-color: #66bb6a;
+}
+.bgGrey{
+    background-color:#eeeeee ;
+}
+h4{
+    margin: 0px;
+    padding:1em;
+    padding-bottom: 0.4em;
+}
+.off-setTop{
+   padding-top: 2em;
+}
+.limitWidth{
+    max-width: 180px;
+}
+.boxLogin{
+    width: 50%;
+    background-color: #eeeeee;
+    margin: 0 auto;
+}
+.boxLogin h6{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
