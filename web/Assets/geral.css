@@ -107,4 +107,31 @@ h4{
 }
 .map{
     margin-top:1em;
+    border-left: 1px grey solid;
+}
+#imgIndex{
+width:350px !important;
+height: 250px !important;
+}
+#apartamentosBanner{
+    background-image: url(apartamento2.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+#casasBanner{
+    background-image: url(casa2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#outrosBanner{
+    background-image: url(apartamento1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.subtitulo{
+    padding-left: 2em;
+    font-size: 1.3em;
 }

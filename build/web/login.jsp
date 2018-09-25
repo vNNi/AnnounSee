@@ -40,7 +40,7 @@
                             </div>
                              <div class="row">
                                 <div class="input-field col s12">
-                                  <input id="senha" type="email" class="validate">
+                                  <input id="senha" type="password" class="validate">
                                   <label for="senha">Senha</label>
                                 </div>
                              </div>

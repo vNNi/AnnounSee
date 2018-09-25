@@ -9,13 +9,12 @@
     <head>
         <title>AnnounSee - Seu próximo lar, em um click!</title>
         <meta charset="UTF-8">
-         <icon></icon>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="Assets/geral.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body class="bgGrey">
+    <body class="">
         <%@include file="navBar.jsp" %>
         <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro" id="fixedbutton" href="#"><i class="material-icons">arrow_drop_up</i></a>
         <div class="banner valign-wrapper">
@@ -87,22 +86,29 @@
                 </div>
             </div>
             <div class="center-align">
-                    <a class="waves-effect waves-light btn-small verdeEscuro">Continue vendo</a>
+                <a class="waves-effect waves-light btn-small verdeEscuro">Continue vendo</a>
             </div>
         </section>
         <section class="container">
             <h4>Galeria</h4>
-            <hr>
+            <div class="row">
+            <hr class="off-setLeft col s1 hrColor">
+            </div>
           <div class="carousel">
-                <a class="carousel-item" href="#one!"><img src="Assets/casa1.jpg"></a>
-                <a class="carousel-item" href="#two!"><img src="Assets/casa1.jpg"></a>
-                <a class="carousel-item" href="#three!"><img src="Assets/casa3.jpg"></a>
-                <a class="carousel-item" href="#four!"><img src="Assets/apartamento1.jpg"></a>
-                <a class="carousel-item" href="#five!"><img src="Assets/apartamento2.jpg"></a>
+                <a class="carousel-item" href="#one!" id="imgIndex"><img src="Assets/casa1.jpg"></a>
+                <a class="carousel-item" href="#two!" id="imgIndex"><img src="Assets/casa1.jpg"></a>
+                <a class="carousel-item" href="#three!" id="imgIndex"><img src="Assets/casa3.jpg"></a>
+                <a class="carousel-item" href="#four!" id="imgIndex"><img src="Assets/apartamento1.jpg"></a>
+                <a class="carousel-item" href="#five!" id="imgIndex"><img src="Assets/apartamento2.jpg"></a>
           </div>
         </section>
         <%@include file="footer.jsp" %>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="Assets/js/materialize.js"></script>
+        <script>
+             $(document).ready(function(){
+             $('.carousel').carousel();
+         });
+        </script>
     </body>
 </html>

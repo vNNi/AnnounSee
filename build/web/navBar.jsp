@@ -11,7 +11,7 @@
               <div class="nav-wrapper container">
                 <a href="index.jsp" class="brand-logo" alt="Logo AnnounSee">AnnounSee</a>
                 <ul id="nav" class="right hide-on-med-and-down">
-                  <li><a href="sass.html" class="verdeClaro">Anuncie</a></li>
+                  <li><a href="anuncie.jsp" class="verdeClaro">Anuncie</a></li>
                   <li><a href="cadastro.jsp">Cadastre-se</a></li>
                   <li><a href="login.jsp">Login</a></li>
                 </ul>
