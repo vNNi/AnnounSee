@@ -32,34 +32,36 @@
                 <div class="col s12 m6 l6">
                     <h4>Cadastre-se</h4>
                      <div class="row">
-                        <div class="input-field col s6">
-                          <input id="nome" type="text" class="validate">
-                          <label for="nome">Nome</label>
-                        </div>
-                        <div class="input-field col s6">
-                          <input id="sobrenome" type="text" class="validate">
-                          <label for="sobrenome">Sobrenome</label>
-                        </div>
-                         <div class="input-field col s12">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-                         <div class="input-field col s12 m6">
-                             <input id="tel" type="tel" class="validate">
-                            <label for="tel">Telefone - (xx)xxxxx-xxxx</label>
-                        </div>
-                         <div class="input-field col s12 m6">
-                             <input id="senha" type="password" class="validate">
-                            <label for="senha">Senha</label>
-                        </div>
-                         <div class="input-field col s12 m6 right">
-                             <button class="btn waves-effect waves-light verdeClaro " type="submit" name="action">Submit
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </div>
-                        <div class="input-field col s12 m6 left">
-                            <p class="pdLeft"><a href="login.jsp">Já possui Cadastro?</a></p>
-                        </div>
+                         <form method="post" action="Cadastrar">
+                            <div class="input-field col s6">
+                              <input id="nome" type="text" class="validate">
+                              <label for="nome">Nome</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="sobrenome" type="text" class="validate">
+                              <label for="sobrenome">Sobrenome</label>
+                            </div>
+                             <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                             <div class="input-field col s12 m6">
+                                 <input id="tel" type="tel" class="validate">
+                                <label for="tel">Telefone - (xx)xxxxx-xxxx</label>
+                            </div>
+                             <div class="input-field col s12 m6">
+                                 <input id="senha" type="password" class="validate">
+                                <label for="senha">Senha</label>
+                            </div>
+                             <div class="input-field col s12 m6 right">
+                                 <button class="btn waves-effect waves-light verdeClaro " type="submit" name="action">Submit
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                            <div class="input-field col s12 m6 left">
+                                <p class="pdLeft"><a href="login.jsp">Já possui Cadastro?</a></p>
+                            </div>
+                        </form>
                      </div>
                 </div>
                 <div class="col s12 m6 l6 map">
