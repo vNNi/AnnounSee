@@ -12,7 +12,8 @@ import java.sql.SQLException;
  * @author Vinic
  */
 public class Conexao{
-        public Connection Conectar() throws ClassNotFoundException, SQLException{
+        public Connection Conectar() throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException{
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
                 return DriverManager.getConnection("jdbc:mysql://localhost/announsee","root","");
         }
 }

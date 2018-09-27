@@ -1,9 +1,8 @@
 <%-- 
     Document   : cadastro
-    Created on : 23/09/2018, 20:16:33
+    Created on : 26/09/2018, 21:54:33
     Author     : Vinic
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,23 +33,23 @@
                      <div class="row">
                          <form method="post" action="Cadastrar">
                             <div class="input-field col s6">
-                              <input id="nome" type="text" class="validate">
+                              <input id="nome" name="nome" type="text" class="validate">
                               <label for="nome">Nome</label>
                             </div>
                             <div class="input-field col s6">
-                              <input id="sobrenome" type="text" class="validate">
+                              <input id="sobrenome" name="sobrenome" type="text" class="validate">
                               <label for="sobrenome">Sobrenome</label>
                             </div>
                              <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" name="email" type="email" class="validate">
                                 <label for="email">Email</label>
                             </div>
                              <div class="input-field col s12 m6">
-                                 <input id="tel" type="tel" class="validate">
+                                 <input id="tel" type="tel" name="tel" class="validate">
                                 <label for="tel">Telefone - (xx)xxxxx-xxxx</label>
                             </div>
                              <div class="input-field col s12 m6">
-                                 <input id="senha" type="password" class="validate">
+                                 <input id="senha" name="senha" type="password" class="validate">
                                 <label for="senha">Senha</label>
                             </div>
                              <div class="input-field col s12 m6 right">

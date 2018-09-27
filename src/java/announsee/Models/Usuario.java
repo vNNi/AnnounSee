@@ -11,7 +11,7 @@ package announsee.Models;
  */
 public class Usuario {
     String nome,sobrenome,email,senha;
-    int telefone;
+    String telefone;
 
     public String getNome() {
         return nome;
@@ -45,11 +45,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
     
