@@ -13,7 +13,16 @@
                 <ul id="nav" class="right hide-on-med-and-down">
                   <li><a href="anuncie.jsp" class="verdeClaro">Anuncie</a></li>
                   <li><a href="cadastro.jsp">Cadastre-se</a></li>
-                  <li><a href="login.jsp">Login</a></li>
+                  <%if(session.getAttribute("logado")=="true"){
+                  %>
+                  <li><a href="logout.jsp">Logout</a></li>
+                  <%
+                  }else{
+                  %>
+                    <li><a href="login.jsp">Login</a></li>
+                  <%
+                  }
+                  %>
                 </ul>
               </div>
         </nav>

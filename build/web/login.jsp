@@ -31,16 +31,16 @@
                         <img src="Assets/userDeafult.png " alt="" class="circle limitWidth ">
                     </div>
                     <div class="row container">
-                        <form class="col s12" id="form1">
+                        <form class="col s12" id="form1" action="Logar" method="post">
                             <div class="row">
                                 <div class="input-field col s12">
-                                  <input id="email" type="email" class="validate">
+                                    <input id="email" type="email" name="email" class="validate">
                                   <label for="email">Email</label>
                                 </div>
                             </div>
                              <div class="row">
                                 <div class="input-field col s12">
-                                  <input id="senha" type="password" class="validate">
+                                  <input id="senha" type="password" name="senha" class="validate">
                                   <label for="senha">Senha</label>
                                 </div>
                              </div>
