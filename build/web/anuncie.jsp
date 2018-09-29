@@ -45,47 +45,85 @@
             <hr class="off-setLeft col s1 hrColor">
             </div>
         <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                <label for="disabled">Disabled</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                This is an inline input field:
-                <div class="input-field inline">
-                  <input id="email_inline" type="email" class="validate">
-                  <label for="email_inline">Email</label>
-                  <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Placeholder" name="bairro" id="first_name" type="text" class="validate" required>
+                  <label for="first_name">Bairro</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="number" name="preco" class="validate" required>
+                  <label for="last_name">Preço</label>
                 </div>
               </div>
-            </div>
-          </form>
-        </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input  name="descricao"  id="description" type="text" class="validate" required>
+                  <label for="disabled">Descrição</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" name="rua" type="text" class="validate" required>
+                  <label for="password">Rua</label>
+                </div>
+              </div>
+                <div class="row">
+                  <div class="col s6">
+                      <label>Categorias</label>
+                    <p>
+                      <label>
+                        <input name="group1" type="radio" value="casa"checked />
+                        <span>Casa</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input name="group1" value="apartamento" type="radio" />
+                        <span>Apartamento</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                          <input name="group1" value="outros" type="radio"  />
+                        <span>Outros</span>
+                      </label>
+                    </p>
+                  </div>
+                    <div class="col 6 s6">
+                        <div class="file-field input-field">
+                          <div class="btn">
+                            <span>Foto</span>
+                            <input type="file" required>
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" required>
+                          </div>
+                        </div>
+                        <small>limite 1500x1250</small>
+                    </div> 
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="email" name="telefone" type="number" class="validate" required>
+                  <label for="email">Telefone</label>
+                </div>
+                 <div class="input-field col s6">
+                  <input id="email" name="telefone" name="nome" type="email" class="validate">
+                  <label for="email">Nome</label>
+                </div>
+              </div>  
+                 <div class="row">
+                <div class="input-field col s12">
+                  <input id="facebook" name="facebook" type="text" class="validate">
+                  <label for="email">Facebook</label>
+                </div>
+              </div> 
+                <div>
+                    <button type="submit"class="waves-effect waves-light btn right">PUBLICAR</button>    
+                </div>
+            </form>
+          </div>
         </section>
         <%@include file="footer.jsp" %>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

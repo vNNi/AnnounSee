@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package announsee;
+package controllers;
 
 import announsee.DAO.Conexao;
 import announsee.DAO.UsuarioDAO;
