@@ -45,27 +45,27 @@
             <hr class="off-setLeft col s1 hrColor">
             </div>
         <div class="row">
-            <form class="col s12">
+            <form class="col s12" method="post" action="Anunciar2" enctype="multipart/form-data">
               <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="Placeholder" name="bairro" id="first_name" type="text" class="validate" required>
-                  <label for="first_name">Bairro</label>
+                    <input name="bairro" id="first_name" type="text" class="validate" required>
+                  <label for="bairro">Bairro</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="last_name" type="number" name="preco" class="validate" required>
-                  <label for="last_name">Preço</label>
+                  <input id="preco" type="number" name="preco" class="validate" required>
+                  <label for="preco">Preço</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <input  name="descricao"  id="description" type="text" class="validate" required>
-                  <label for="disabled">Descrição</label>
+                  <label for="descricao">Descrição</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password" name="rua" type="text" class="validate" required>
-                  <label for="password">Rua</label>
+                  <input id="rua" name="rua" type="text" class="validate" required>
+                  <label for="rua">Rua</label>
                 </div>
               </div>
                 <div class="row">
@@ -73,19 +73,19 @@
                       <label>Categorias</label>
                     <p>
                       <label>
-                        <input name="group1" type="radio" value="casa"checked />
+                        <input name="categoria" type="radio" value="casa" checked />
                         <span>Casa</span>
                       </label>
                     </p>
                     <p>
                       <label>
-                        <input name="group1" value="apartamento" type="radio" />
+                        <input name="categoria" value="apartamento" type="radio" />
                         <span>Apartamento</span>
                       </label>
                     </p>
                     <p>
                       <label>
-                          <input name="group1" value="outros" type="radio"  />
+                          <input name="categoria" value="outros" type="radio"  />
                         <span>Outros</span>
                       </label>
                     </p>
@@ -94,7 +94,7 @@
                         <div class="file-field input-field">
                           <div class="btn">
                             <span>Foto</span>
-                            <input type="file" required>
+                            <input type="file" name="foto" required>
                           </div>
                           <div class="file-path-wrapper">
                             <input class="file-path validate" type="text" required>
@@ -105,22 +105,23 @@
               </div>
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="email" name="telefone" type="number" class="validate" required>
-                  <label for="email">Telefone</label>
+                  <input id="telefone" name="telContato" type="number" class="validate" required>
+                  <label for="telefone">Telefone</label>
                 </div>
                  <div class="input-field col s6">
-                  <input id="email" name="telefone" name="nome" type="email" class="validate">
-                  <label for="email">Nome</label>
+                  <input id="nome" name="nome" type="text" class="validate" required>
+                  <label for="nome">Nome</label>
                 </div>
               </div>  
                  <div class="row">
                 <div class="input-field col s12">
                   <input id="facebook" name="facebook" type="text" class="validate">
-                  <label for="email">Facebook</label>
+                  <label for="facebook">Facebook</label>
                 </div>
               </div> 
                 <div>
-                    <button type="submit"class="waves-effect waves-light btn right">PUBLICAR</button>    
+                    <button type="submit" class="waves-effect waves-light btn right" value="ANUNCIAR"> ANUNCIAR
+                    </button>
                 </div>
             </form>
           </div>

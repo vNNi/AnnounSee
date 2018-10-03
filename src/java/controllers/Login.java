@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -40,11 +40,12 @@ public class Login extends HttpServlet{
         try {
             dao = new UsuarioDAO();
              result = dao.verifica(usuario);
-            if(result==null){
+            if(!result.next()){
                 page="cadastro.jsp";
             }else{
                 HttpSession session=req.getSession(true);
                 session.setAttribute("logado","true");
+                session.setAttribute("id", result.getString("usu_id"));
                 page="index.jsp";
             }
         resp.sendRedirect(page);

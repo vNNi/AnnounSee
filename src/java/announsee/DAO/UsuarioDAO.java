@@ -9,10 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class UsuarioDAO {
-    String nome,sobrenome,email,senha;
-    int telefone,result=0;
-    
-    
+    int result=0;
     public UsuarioDAO() throws ClassNotFoundException, SQLException{
     }
     public int adiciona(Usuario usuario) throws ClassNotFoundException, InstantiationException, IllegalAccessException{
