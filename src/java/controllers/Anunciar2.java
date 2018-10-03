@@ -50,61 +50,36 @@ public class Anunciar2 extends HttpServlet{
         telContato = mreq.getParameter("telContato");
         descricao = mreq.getParameter("descricao");
         imagem = mreq.getOriginalFileName("foto");
-        
         InputStream bis = new BufferedInputStream(new FileInputStream(tempDir+imagem)); 
-        String name = imagem;
-         try{
-            Connection conn= new Conexao().Conectar();
-            PreparedStatement st= conn.prepareStatement("INSERT INTO imovel(imo_usu_id,imo_categoria,imo_preco,imo_bairro,imo_rua,imo_descricao,imo_telContato,imo_nome,imo_faceContato,imo_foto) VALUES(?,?,?,?,?,?,?,?,?,?)");
-            st.setInt(1,idUsu);
-            st.setString(2, categoria);
-            st.setString(3,preco);
-            st.setString(4, bairro);
-            st.setString(5,rua);
-            st.setString(6, descricao);
-            st.setString(7, telContato);
-            st.setString(8, nome);
-            st.setString(9,faceContato);
-            st.setBinaryStream(10, bis);
-            result =st.executeUpdate();
-        }catch(SQLException | ClassNotFoundException | InstantiationException ex){
-            System.out.print(ex);
-           Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(Anunciar2.class.getName()).log(Level.SEVERE, null, ex);
-        }
-         
-         PrintWriter out = resp.getWriter();
-         out.print(name);
 
-//        Imovel imovel = new Imovel();
-//        imovel.setUsuId(idUsu);
-//        imovel.setCategoria(categoria);
-//        imovel.setBairro(bairro);
-//        imovel.setPreco(preco);
-//        imovel.setRua(rua);
-//        imovel.setFaceContato(faceContato);
-//        imovel.setNome(nome);
-//        imovel.setTelContato(telContato);
-//        imovel.setDescricao(descricao);
-//        imovel.setFoto(bis);
+
+          Imovel imovel = new Imovel();
+          imovel.setUsuId(idUsu);
+          imovel.setCategoria(categoria);
+          imovel.setBairro(bairro);
+          imovel.setPreco(preco);
+          imovel.setRua(rua);
+          imovel.setFaceContato(faceContato);
+          imovel.setNome(nome);
+          imovel.setTelContato(telContato);
+          imovel.setDescricao(descricao);
+          imovel.setFoto(bis);
         
-//        ImovelDAO dao = new ImovelDAO();
+          ImovelDAO dao = new ImovelDAO();
         
-//        try {
-//            result=dao.adicionar(imovel);
-//        } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
-//            PrintWriter out = resp.getWriter();
-//            out.print(ex.getMessage());
-//        }
-//        if(result>0){
-//            PrintWriter out = resp.getWriter();
-//            out.print(idUsu+categoria+bairro+preco+rua+faceContato+nome+telContato+descricao+" "+bis+" "+imagem);
-//        }else{
-//             PrintWriter out = resp.getWriter();
-//            out.print(imovel.getUsuId()+imovel.getCategoria()+imovel.getBairro()+imovel.getPreco()+imovel.getRua()+imovel.getFaceContato()+imovel.getNome()+imovel.getTelContato()+imovel.getDescricao()+" "+bis+" "+imagem+" ashdgasuydgasuydg");
-//            out.println(tempDir+imagem);
-//        }
+        try {
+            result=dao.adicionar(imovel);
+        } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+            PrintWriter out = resp.getWriter();
+            out.print(ex.getMessage());
+        }
+        if(result>0){
+           resp.sendRedirect("index.jsp");
+        }else{
+             PrintWriter out = resp.getWriter();
+            out.print(imovel.getUsuId()+imovel.getCategoria()+imovel.getBairro()+imovel.getPreco()+imovel.getRua()+imovel.getFaceContato()+imovel.getNome()+imovel.getTelContato()+imovel.getDescricao()+" "+bis+" "+imagem+" ashdgasuydgasuydg");
+            out.println(tempDir+imagem);
+        }
        
     }
 
