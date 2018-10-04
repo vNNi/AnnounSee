@@ -13,10 +13,37 @@ import java.sql.Blob;
  * @author Vinic
  */
 public class Imovel {
+    int id;
     int usuId,BinaryInt;
     String categoria,bairro,rua,descricao,telContato,nome,faceContato;
     String preco;
     InputStream foto;
+    byte[] blob;
+    String path;
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public byte[] getBlob() {
+        return blob;
+    }
+
+    public void setBlob(byte[] blob) {
+        this.blob = blob;
+    }
 
     public int getUsuId() {
         return usuId;

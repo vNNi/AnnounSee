@@ -64,7 +64,7 @@ public class Anunciar2 extends HttpServlet{
           imovel.setTelContato(telContato);
           imovel.setDescricao(descricao);
           imovel.setFoto(bis);
-        
+          imovel.setPath(imagem);
           ImovelDAO dao = new ImovelDAO();
         
         try {

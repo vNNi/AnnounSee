@@ -3,6 +3,15 @@
     Created on : 23/09/2018, 14:21:10
     Author     : Vinic
 --%>
+
+<%@page import="announsee.Models.Imovel"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="announsee.DAO.ImovelDAO"%>
+<%
+ImovelDAO imovelDao = new ImovelDAO();
+ArrayList<Imovel> casas = imovelDao.listarCasas();
+ArrayList<Imovel> apartaments = imovelDao.listApartaments();
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -28,18 +37,24 @@
                 <div class="row">
                     <hr class="col s1 hrColor">
                     <br>
-                    <div class="col s6 m4">
+                     <%
+                            for(Imovel ap:apartaments){                           
+                        %>
+                    <div class="col s6 m4">  
                         <div class="card">
                           <div class="card-image">
-                            <img src="images/sample-1.jpg">
-                            <span class="card-title">Card Title</span>
+                              <img src="Assets/<%=ap.getPath()%>">
+                            <span class="card-title "><%=ap.getBairro()%></span>
                             <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro"><i class="material-icons">add</i></a>
                           </div>
                           <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            <p><%=ap.getDescricao()%></p>
                           </div>
                         </div>
                     </div>
+                    <%
+                                                     }
+                    %>
                 </div>
             <div class="center-align">
                     <a class="waves-effect waves-light btn-small verdeEscuro">Continue vendo</a>
@@ -50,18 +65,28 @@
             <div class="row">
                 <hr class="col s1 hrColor">
                 <br>
+                <%
+                for(Imovel c:casas){
+                %>
                 <div class="col s6 m4">
                     <div class="card">
                       <div class="card-image">
-                        <img src="images/sample-1.jpg">
-                        <span class="card-title">Card Title</span>
+                          <img src="Assets/<%=c.getPath()%>">
+                        <span class="card-title">Card Tittle</span>
                         <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                          <p class=""><%=c.getPreco()%>
+                          <br>
+                          <br>
+                        <p><%=c.getDescricao()%></p>
                       </div>
                     </div>
                 </div>
+                        <%
+                                        
+                    }
+                        %>
             </div>
             <div class="center-align">
                     <a class="waves-effect waves-light btn-small verdeEscuro">Continue vendo</a>

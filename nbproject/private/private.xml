@@ -5,7 +5,10 @@
         <group>
             <file>file:/C:/Users/Vinic/Documents/NetBeansProjects/AnnounSee/src/java/announsee/Models/Imovel.java</file>
             <file>file:/C:/Users/Vinic/Documents/NetBeansProjects/AnnounSee/src/java/controllers/Anunciar2.java</file>
+            <file>file:/C:/Users/Vinic/Documents/NetBeansProjects/AnnounSee/web/index.jsp</file>
             <file>file:/C:/Users/Vinic/Documents/NetBeansProjects/AnnounSee/src/java/announsee/DAO/ImovelDAO.java</file>
+            <file>file:/C:/Users/Vinic/Documents/NetBeansProjects/AnnounSee/src/java/announsee/DAO/TestaConexao.java</file>
+            <file>file:/C:/Users/Vinic/Documents/NetBeansProjects/AnnounSee/src/java/announsee/DAO/UsuarioDAO.java</file>
         </group>
     </open-files>
 </project-private>
