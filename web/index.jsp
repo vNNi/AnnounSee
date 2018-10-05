@@ -11,6 +11,8 @@
 ImovelDAO imovelDao = new ImovelDAO();
 ArrayList<Imovel> casas = imovelDao.listarCasas();
 ArrayList<Imovel> apartaments = imovelDao.listApartaments();
+ArrayList<Imovel> outros = imovelDao.listOthers();
+int i = 0,f=0,g=0;
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,7 +27,6 @@ ArrayList<Imovel> apartaments = imovelDao.listApartaments();
     </head>
     <body class="">
         <%@include file="navBar.jsp" %>
-        <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro" id="fixedbutton" href="#"><i class="material-icons">arrow_drop_up</i></a>
         <div class="banner valign-wrapper">
                 <div class="center-align container fundoBanner">
                     <h3 class="resetMargin"> Seu novo lar, em um clique!</h3>
@@ -38,14 +39,24 @@ ArrayList<Imovel> apartaments = imovelDao.listApartaments();
                     <hr class="col s1 hrColor">
                     <br>
                      <%
-                            for(Imovel ap:apartaments){                           
+                            for(Imovel ap:apartaments){ 
+                            i++;
                         %>
                     <div class="col s6 m4">  
+                        <div id="modal<%=i%>" class="modal">
+                            <div class="modal-content">
+                              <h4><%=ap.getFaceContato()%></h4>
+                              <p>A bunch of text</p>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                            </div>
+                        </div>           
                         <div class="card">
                           <div class="card-image">
                               <img src="Assets/<%=ap.getPath()%>">
                             <span class="card-title "><%=ap.getBairro()%></span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro"><i class="material-icons">add</i></a>
+                            <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro modal-trigger"  href="#modal<%=i%>"><i class="material-icons">add</i></a>
                           </div>
                           <div class="card-content">
                             <p><%=ap.getDescricao()%></p>
@@ -67,13 +78,24 @@ ArrayList<Imovel> apartaments = imovelDao.listApartaments();
                 <br>
                 <%
                 for(Imovel c:casas){
+                    f++;
                 %>
                 <div class="col s6 m4">
+                <!-- Modal Structure -->
+                <div id="modal<%=f%>" class="modal">
+                  <div class="modal-content">
+                    <h4><%=c.getFaceContato()%></h4>
+                    <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                  </div>
+                </div>           
                     <div class="card">
                       <div class="card-image">
                           <img src="Assets/<%=c.getPath()%>">
-                        <span class="card-title">Card Tittle</span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro"><i class="material-icons">add</i></a>
+                        <span class="card-title"><%=c.getBairro()%></span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light modal-trigger verdeEscuro" href="#modal<%=f%>"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
                           <p class=""><%=c.getPreco()%>
@@ -96,22 +118,41 @@ ArrayList<Imovel> apartaments = imovelDao.listApartaments();
             <h4>Outros</h4>
             <div class="row">
                 <hr class="col s1 hrColor">
-                <br>
+                <br> 
+                <%
+                    for(Imovel ot:outros){
+                        g++;
+                %>
                 <div class="col s6 m4">
+                     <div id="modal<%=g%>" class="modal">
+                        <div class="modal-content">
+                          <h4><%=ot.getFaceContato()%></h4>
+                          <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                        </div>
+                     </div>           
                     <div class="card">
                       <div class="card-image">
-                        <img src="images/sample-1.jpg">
-                        <span class="card-title">Card Title</span>
+                          <img src="Assets/<%=ot.getPath()%>">
+                        <span class="card-title"><%=ot.getBairro()%></span>
                         <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        <p class=""><%=ot.getPreco()%>
+                        <br>
+                        <br>
+                        <p><%=ot.getDescricao()%></p>
                       </div>
                     </div>
                 </div>
+                <%
+                    }
+                %>
             </div>
             <div class="center-align">
-                <a class="waves-effect waves-light btn-small verdeEscuro">Continue vendo</a>
+                 <a class="btn-floating halfway-fab waves-effect waves-light modal-trigger verdeEscuro" href="#modal<%=g%>"><i class="material-icons">add</i></a>
             </div>
         </section>
         <section class="container">
@@ -134,6 +175,9 @@ ArrayList<Imovel> apartaments = imovelDao.listApartaments();
              $(document).ready(function(){
              $('.carousel').carousel();
          });
+          $(document).ready(function(){
+           $('.modal').modal();
+          });
         </script>
     </body>
 </html>
