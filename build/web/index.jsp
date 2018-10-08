@@ -9,9 +9,9 @@
 <%@page import="announsee.DAO.ImovelDAO"%>
 <%
 ImovelDAO imovelDao = new ImovelDAO();
-ArrayList<Imovel> casas = imovelDao.listarCasas();
-ArrayList<Imovel> apartaments = imovelDao.listApartaments();
-ArrayList<Imovel> outros = imovelDao.listOthers();
+ArrayList<Imovel> casas = imovelDao.listIndexHouse();
+ArrayList<Imovel> apartaments = imovelDao.listIndexApartaments();
+ArrayList<Imovel> outros = imovelDao.listIndexOthers();
 int i = 0,f=0,g=0;
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -64,11 +64,11 @@ int i = 0,f=0,g=0;
                         </div>
                     </div>
                     <%
-                                                     }
+                    }
                     %>
                 </div>
             <div class="center-align">
-                    <a class="waves-effect waves-light btn-small verdeEscuro">Continue vendo</a>
+                    <a class="waves-effect waves-light btn-small verdeEscuro" href="continueVendo.jsp?category=apartamento">Continue vendo</a>
             </div>
         </section>
         <section class="container">

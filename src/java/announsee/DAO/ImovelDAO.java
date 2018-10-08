@@ -153,4 +153,151 @@ public class ImovelDAO {
         }
        return listingOthers;
     }
+     
+    public ArrayList<Imovel> listIndexOthers(){
+       ArrayList<Imovel> listingIndexOthers = new ArrayList<>();
+       Connection conn=null;
+       String sql = "select * from imovel where imo_categoria = 'outros' LIMIT 6";
+        try {
+            conn = new Conexao().Conectar();
+        } catch (ClassNotFoundException | SQLException | InstantiationException | IllegalAccessException ex) {
+           System.out.print(ex.getMessage());
+        }
+        
+        try {
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                Imovel imovel = new Imovel();
+                imovel.setId(rs.getInt("imo_id"));
+                imovel.setCategoria(rs.getString("imo_categoria"));
+                imovel.setPreco(rs.getString("imo_preco"));
+                imovel.setBairro(rs.getString("imo_bairro"));
+                imovel.setRua(rs.getString("imo_rua"));
+                imovel.setDescricao(rs.getString("imo_descricao"));
+                imovel.setTelContato(rs.getString("imo_telContato"));
+                imovel.setNome(rs.getString("imo_nome"));
+                imovel.setFaceContato(rs.getString("imo_faceContato"));
+//                imovel.setBinaryInt(rs.getByte("imo_foto"));
+                imovel.setPath(rs.getString("imo_path"));
+                listingIndexOthers.add(imovel);
+            }
+            rs.close();
+            conn.close();
+        } catch (SQLException ex) {
+           System.out.print(ex.getMessage());
+        }
+       return listingIndexOthers;
+    }
+    
+    public ArrayList<Imovel> listIndexHouse(){
+       ArrayList<Imovel> listingIndexHouse = new ArrayList<>();
+       Connection conn=null;
+       String sql = "select * from imovel where imo_categoria = 'casa' LIMIT 6";
+        try {
+            conn = new Conexao().Conectar();
+        } catch (ClassNotFoundException | SQLException | InstantiationException | IllegalAccessException ex) {
+           System.out.print(ex.getMessage());
+        }
+        
+        try {
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                Imovel imovel = new Imovel();
+                imovel.setId(rs.getInt("imo_id"));
+                imovel.setCategoria(rs.getString("imo_categoria"));
+                imovel.setPreco(rs.getString("imo_preco"));
+                imovel.setBairro(rs.getString("imo_bairro"));
+                imovel.setRua(rs.getString("imo_rua"));
+                imovel.setDescricao(rs.getString("imo_descricao"));
+                imovel.setTelContato(rs.getString("imo_telContato"));
+                imovel.setNome(rs.getString("imo_nome"));
+                imovel.setFaceContato(rs.getString("imo_faceContato"));
+//                imovel.setBinaryInt(rs.getByte("imo_foto"));
+                imovel.setPath(rs.getString("imo_path"));
+                listingIndexHouse.add(imovel);
+            }
+            rs.close();
+            conn.close();
+        } catch (SQLException ex) {
+           System.out.print(ex.getMessage());
+        }
+       return listingIndexHouse;
+    }
+    public ArrayList<Imovel> listIndexApartaments(){
+       ArrayList<Imovel> listingIndexApartaments = new ArrayList<>();
+       Connection conn=null;
+       String sql = "select * from imovel where imo_categoria = 'apartamento' LIMIT 6";
+        try {
+            conn = new Conexao().Conectar();
+        } catch (ClassNotFoundException | SQLException | InstantiationException | IllegalAccessException ex) {
+           System.out.print(ex.getMessage());
+        }
+        
+        try {
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                Imovel imovel = new Imovel();
+                imovel.setId(rs.getInt("imo_id"));
+                imovel.setCategoria(rs.getString("imo_categoria"));
+                imovel.setPreco(rs.getString("imo_preco"));
+                imovel.setBairro(rs.getString("imo_bairro"));
+                imovel.setRua(rs.getString("imo_rua"));
+                imovel.setDescricao(rs.getString("imo_descricao"));
+                imovel.setTelContato(rs.getString("imo_telContato"));
+                imovel.setNome(rs.getString("imo_nome"));
+                imovel.setFaceContato(rs.getString("imo_faceContato"));
+//                imovel.setBinaryInt(rs.getByte("imo_foto"));
+                imovel.setPath(rs.getString("imo_path"));
+                listingIndexApartaments.add(imovel);
+            }
+            rs.close();
+            conn.close();
+        } catch (SQLException ex) {
+           System.out.print(ex.getMessage());
+        }
+       return listingIndexApartaments;
+    }
+     public ArrayList<Imovel> listPerCategory(String category){
+       ArrayList<Imovel> listingPerCategory = new ArrayList<>();
+       Connection conn=null;
+       String sql = "select * from imovel where imo_categoria = '"+category+"'";
+        try {
+            conn = new Conexao().Conectar();
+        } catch (ClassNotFoundException | SQLException | InstantiationException | IllegalAccessException ex) {
+           System.out.print(ex.getMessage());
+        }
+        
+        try {
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                Imovel imovel = new Imovel();
+                imovel.setId(rs.getInt("imo_id"));
+                imovel.setCategoria(rs.getString("imo_categoria"));
+                imovel.setPreco(rs.getString("imo_preco"));
+                imovel.setBairro(rs.getString("imo_bairro"));
+                imovel.setRua(rs.getString("imo_rua"));
+                imovel.setDescricao(rs.getString("imo_descricao"));
+                imovel.setTelContato(rs.getString("imo_telContato"));
+                imovel.setNome(rs.getString("imo_nome"));
+                imovel.setFaceContato(rs.getString("imo_faceContato"));
+//                imovel.setBinaryInt(rs.getByte("imo_foto"));
+                imovel.setPath(rs.getString("imo_path"));
+                listingPerCategory.add(imovel);
+            }
+            rs.close();
+            conn.close();
+        } catch (SQLException ex) {
+           System.out.print(ex.getMessage());
+        }
+       return listingPerCategory;
+    }
+    
 }
