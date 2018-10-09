@@ -44,9 +44,6 @@ int i=0;
                               <h4><%=h.getFaceContato()%></h4>
                               <p>A bunch of text</p>
                             </div>
-                            <div class="modal-footer">
-                              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                            </div>
                         </div>           
                         <div class="card">
                           <div class="card-image">
@@ -74,14 +71,26 @@ int i=0;
                         %>
                     <div class="col s6 m4">  
                         <div id="modal<%=i%>" class="modal">
-                            <div class="modal-content">
-                              <h4><%=ap.getFaceContato()%></h4>
-                              <p>A bunch of text</p>
+                  <div class="modal-content">
+                    <div class="container">
+                        <img src="Assets/<%=ap.getPath()%>" class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="100%" max-height="350px">
+                        <hr>
+                        <h3 class="textColorDarkGreen tituloModal">R$ <%=ap.getPreco()%></h3>
+                        <p><%=ap.getDescricao()%></p>  
+                        <h5> Endereço:</h5>
+                            <div>
+                                <span><b>Bairro:</b> <%=ap.getBairro()%></span><br>
+                                <span><b>Rua:</b> <%=ap.getRua()%></span><br>
                             </div>
-                            <div class="modal-footer">
-                              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                            </div>
-                        </div>           
+                        <h5>Contatos:</h5>
+                        <div>
+                            <span><b>Nome:</b> <%=ap.getNome()%></span><br>
+                            <span><b>Telefone:</b> <%=ap.getTelContato()%></span><br>
+                            <span><b>Facebook:</b> <%=ap.getFaceContato()%></span><br>
+                        </div>   
+                    </div>
+                  </div>
+                  </div>           
                         <div class="card">
                           <div class="card-image">
                               <img src="Assets/<%=ap.getPath()%>">

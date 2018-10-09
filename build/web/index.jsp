@@ -30,7 +30,7 @@ int i = 0,f=0,g=0;
         <div class="banner valign-wrapper">
                 <div class="center-align container fundoBanner">
                     <h3 class="resetMargin"> Seu novo lar, em um clique!</h3>
-                    <a class="waves-effect waves-light btn-large verdeEscuro">ANUNCIE</a>
+                    <a class="waves-effect waves-light btn-large verdeEscuro" href="anuncie.jsp">ANUNCIE</a>
                 </div>
         </div>
         <section class="container">
@@ -43,15 +43,28 @@ int i = 0,f=0,g=0;
                             i++;
                         %>
                     <div class="col s6 m4">  
-                        <div id="modal<%=i%>" class="modal">
-                            <div class="modal-content">
-                              <h4><%=ap.getFaceContato()%></h4>
-                              <p>A bunch of text</p>
+                        <!-- Modal Structure -->
+                <div id="modal<%=i%>" class="modal">
+                  <div class="modal-content">
+                    <div class="container">
+                        <img src="Assets/<%=ap.getPath()%>" class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="100%" max-height="350px">
+                        <hr>
+                        <h3 class="textColorDarkGreen tituloModal">R$ <%=ap.getPreco()%></h3>
+                        <p><%=ap.getDescricao()%></p>  
+                        <h5> Endereço:</h5>
+                            <div>
+                                <span><b>Bairro:</b> <%=ap.getBairro()%></span><br>
+                                <span><b>Rua:</b> <%=ap.getRua()%></span><br>
                             </div>
-                            <div class="modal-footer">
-                              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                            </div>
-                        </div>           
+                        <h5>Contatos:</h5>
+                        <div>
+                            <span><b>Nome:</b> <%=ap.getNome()%></span><br>
+                            <span><b>Telefone:</b> <%=ap.getTelContato()%></span><br>
+                            <span><b>Facebook:</b> <%=ap.getFaceContato()%></span><br>
+                        </div>   
+                    </div>
+                  </div>
+                </div>            
                         <div class="card">
                           <div class="card-image">
                               <img src="Assets/<%=ap.getPath()%>">
@@ -84,11 +97,23 @@ int i = 0,f=0,g=0;
                 <!-- Modal Structure -->
                 <div id="modal<%=f%>" class="modal">
                   <div class="modal-content">
-                    <h4><%=c.getFaceContato()%></h4>
-                    <p>A bunch of text</p>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                    <div class="container">
+                        <img src="Assets/<%=c.getPath()%>" class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="100%" max-height="350px">
+                        <hr>
+                        <h3 class="textColorDarkGreen tituloModal">R$ <%=c.getPreco()%></h3>
+                        <p><%=c.getDescricao()%></p>  
+                        <h5> Endereço:</h5>
+                            <div>
+                                <span><b>Bairro:</b> <%=c.getBairro()%></span><br>
+                                <span><b>Rua:</b> <%=c.getRua()%></span><br>
+                            </div>
+                        <h5>Contatos:</h5>
+                        <div>
+                            <span><b>Nome:</b> <%=c.getNome()%></span><br>
+                            <span><b>Telefone:</b> <%=c.getTelContato()%></span><br>
+                            <span><b>Facebook:</b> <%=c.getFaceContato()%></span><br>
+                        </div>   
+                    </div>
                   </div>
                 </div>           
                     <div class="card">
@@ -111,7 +136,7 @@ int i = 0,f=0,g=0;
                         %>
             </div>
             <div class="center-align">
-                    <a class="waves-effect waves-light btn-small verdeEscuro">Continue vendo</a>
+                    <a class="waves-effect waves-light btn-small verdeEscuro" href="continueVendo.jsp?category=casa">Continue vendo</a>
             </div>
         </section>
         <section class="container">
@@ -124,16 +149,47 @@ int i = 0,f=0,g=0;
                         g++;
                 %>
                 <div class="col s6 m4">
-                     <div id="modal<%=g%>" class="modal">
-                        <div class="modal-content">
-                          <h4><%=ot.getFaceContato()%></h4>
-                          <p>A bunch of text</p>
-                        </div>
-                        <div class="modal-footer">
-                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                        </div>
-                     </div>           
-                    <div class="card">
+                <div id="modal<%=f%>" class="modal">
+                  <div class="modal-content">
+                    <div class="container">
+                        <img src="Assets/<%=ot.getPath()%>" class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="100%" max-height="350px">
+                        <hr>
+                        <h3 class="textColorDarkGreen tituloModal">R$ <%=ot.getPreco()%></h3>
+                        <p><%=ot.getDescricao()%></p>  
+                        <h5> Endereço:</h5>
+                            <div>
+                                <span><b>Bairro:</b> <%=ot.getBairro()%></span><br>
+                                <span><b>Rua:</b> <%=ot.getRua()%></span><br>
+                            </div>
+                        <h5>Contatos:</h5>
+                        <div>
+                            <span><b>Nome:</b> <%=ot.getNome()%></span><br>
+                            <span><b>Telefone:</b> <%=ot.getTelContato()%></span><br>
+                            <span><b>Facebook:</b> <%=ot.getFaceContato()%></span><br>
+                        </div>   
+                    </div>
+                  </div>
+                </div>           
+                    <di <div id="modal<%=f%>" class="modal">
+                  <div class="modal-content">
+                    <div class="container">
+                        <img src="Assets/<%=ot.getPath()%>" class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="100%" max-height="350px">
+                        <hr>
+                        <h3 class="textColorDarkGreen tituloModal">R$ <%=ot.getPreco()%></h3>
+                        <p><%=ot.getDescricao()%></p>  
+                        <h5> Endereço:</h5>
+                            <div>
+                                <span><b>Bairro:</b> <%=ot.getBairro()%></span><br>
+                                <span><b>Rua:</b> <%=ot.getRua()%></span><br>
+                            </div>
+                        <h5>Contatos:</h5>
+                        <div>
+                            <span><b>Nome:</b> <%=ot.getNome()%></span><br>
+                            <span><b>Telefone:</b> <%=ot.getTelContato()%></span><br>
+                            <span><b>Facebook:</b> <%=ot.getFaceContato()%></span><br>
+                        </div>   
+                    </div>
+                  </div>v class="card">
                       <div class="card-image">
                           <img src="Assets/<%=ot.getPath()%>">
                         <span class="card-title"><%=ot.getBairro()%></span>
@@ -152,7 +208,7 @@ int i = 0,f=0,g=0;
                 %>
             </div>
             <div class="center-align">
-                 <a class="btn-floating halfway-fab waves-effect waves-light modal-trigger verdeEscuro" href="#modal<%=g%>"><i class="material-icons">add</i></a>
+                <a class="waves-effect waves-light btn-small verdeEscuro" href="continueVendo.jsp?category=outros">Continue vendo</a>
             </div>
         </section>
         <section class="container">
@@ -177,6 +233,9 @@ int i = 0,f=0,g=0;
          });
           $(document).ready(function(){
            $('.modal').modal();
+          });
+          $(document).ready(function(){
+            $('.materialboxed').materialbox();
           });
         </script>
     </body>
