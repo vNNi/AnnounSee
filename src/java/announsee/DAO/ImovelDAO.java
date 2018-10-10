@@ -32,8 +32,8 @@ public class ImovelDAO {
             PreparedStatement st= conn.prepareStatement("INSERT INTO imovel(imo_usu_id,imo_categoria,imo_preco,imo_bairro,imo_rua,imo_descricao,imo_telContato,imo_nome,imo_faceContato,imo_foto,imo_path) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
             st.setInt(1,imovel.getUsuId());
             st.setString(2, imovel.getCategoria());
-            st.setString(3,imovel.getBairro());
-            st.setString(4, imovel.getPreco());
+            st.setString(3,imovel.getPreco());
+            st.setString(4,imovel.getBairro() );
             st.setString(5,imovel.getRua());
             st.setString(6, imovel.getDescricao());
             st.setString(7, imovel.getTelContato());

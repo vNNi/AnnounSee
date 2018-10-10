@@ -74,6 +74,10 @@ h3{
 .bgGrey{
     background-color:#eeeeee ;
 }
+.bgBlack{
+    background-color:rgba(000,000,000,0.5);
+    font-weight: bold !important;
+}
 h4{
     margin: 0px;
     padding:1em;

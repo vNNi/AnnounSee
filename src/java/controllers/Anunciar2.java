@@ -40,6 +40,7 @@ public class Anunciar2 extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        MultipartRequest mreq = new MultipartRequest(req,tempDir,1888888);
+       req.setCharacterEncoding("UTF-8");
        idUsu =Integer.parseInt(req.getSession(false).getAttribute("id").toString());
         categoria = mreq.getParameter("categoria");
         bairro = mreq.getParameter("bairro");

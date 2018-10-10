@@ -44,7 +44,7 @@ int i = 0,f=0,g=0;
                         %>
                     <div class="col s6 m4">  
                         <!-- Modal Structure -->
-                <div id="modal<%=i%>" class="modal">
+                <div id="modal<%=ap.getId()%>" class="modal">
                   <div class="modal-content">
                     <div class="container">
                         <img src="Assets/<%=ap.getPath()%>" class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="100%" max-height="350px">
@@ -68,10 +68,13 @@ int i = 0,f=0,g=0;
                         <div class="card">
                           <div class="card-image">
                               <img src="Assets/<%=ap.getPath()%>">
-                            <span class="card-title "><%=ap.getBairro()%></span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro modal-trigger"  href="#modal<%=i%>"><i class="material-icons">add</i></a>
+                            <span class="card-title bgBlack "><%=ap.getBairro()%></span>
+                            <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro modal-trigger"  href="#modal<%=ap.getId()%>"><i class="material-icons">add</i></a>
                           </div>
                           <div class="card-content">
+                           <p class="">R$ <%=ap.getPreco()%>
+                          <br>
+                          <br>
                             <p><%=ap.getDescricao()%></p>
                           </div>
                         </div>
@@ -95,7 +98,7 @@ int i = 0,f=0,g=0;
                 %>
                 <div class="col s6 m4">
                 <!-- Modal Structure -->
-                <div id="modal<%=f%>" class="modal">
+                <div id="modal<%=c.getId()%>" class="modal">
                   <div class="modal-content">
                     <div class="container">
                         <img src="Assets/<%=c.getPath()%>" class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="100%" max-height="350px">
@@ -119,11 +122,11 @@ int i = 0,f=0,g=0;
                     <div class="card">
                       <div class="card-image">
                           <img src="Assets/<%=c.getPath()%>">
-                        <span class="card-title"><%=c.getBairro()%></span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light modal-trigger verdeEscuro" href="#modal<%=f%>"><i class="material-icons">add</i></a>
+                        <span class="card-title bgBlack"><%=c.getBairro()%></span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light modal-trigger verdeEscuro" href="#modal<%=c.getId()%>"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
-                          <p class=""><%=c.getPreco()%>
+                          <p class="">R$ <%=c.getPreco()%>
                           <br>
                           <br>
                         <p><%=c.getDescricao()%></p>
@@ -149,7 +152,7 @@ int i = 0,f=0,g=0;
                         g++;
                 %>
                 <div class="col s6 m4">
-                <div id="modal<%=f%>" class="modal">
+                <div id="modal<%=ot.getId()%>" class="modal">
                   <div class="modal-content">
                     <div class="container">
                         <img src="Assets/<%=ot.getPath()%>" class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="100%" max-height="350px">
@@ -170,35 +173,16 @@ int i = 0,f=0,g=0;
                     </div>
                   </div>
                 </div>           
-                    <di <div id="modal<%=f%>" class="modal">
-                  <div class="modal-content">
-                    <div class="container">
-                        <img src="Assets/<%=ot.getPath()%>" class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="100%" max-height="350px">
-                        <hr>
-                        <h3 class="textColorDarkGreen tituloModal">R$ <%=ot.getPreco()%></h3>
-                        <p><%=ot.getDescricao()%></p>  
-                        <h5> Endereço:</h5>
-                            <div>
-                                <span><b>Bairro:</b> <%=ot.getBairro()%></span><br>
-                                <span><b>Rua:</b> <%=ot.getRua()%></span><br>
-                            </div>
-                        <h5>Contatos:</h5>
-                        <div>
-                            <span><b>Nome:</b> <%=ot.getNome()%></span><br>
-                            <span><b>Telefone:</b> <%=ot.getTelContato()%></span><br>
-                            <span><b>Facebook:</b> <%=ot.getFaceContato()%></span><br>
-                        </div>   
-                    </div>
-                  </div>v class="card">
+                   <div class="card">
                       <div class="card-image">
                           <img src="Assets/<%=ot.getPath()%>">
-                        <span class="card-title"><%=ot.getBairro()%></span>
-                        <a class="btn-floating halfway-fab waves-effect waves-light verdeEscuro"><i class="material-icons">add</i></a>
+                        <span class="card-title bgBlack"><%=ot.getBairro()%></span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light modal-trigger verdeEscuro" href="#modal<%=ot.getId()%>"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
-                        <p class=""><%=ot.getPreco()%>
-                        <br>
-                        <br>
+                          <p class="">R$ <%=ot.getPreco()%>
+                          <br>
+                          <br>
                         <p><%=ot.getDescricao()%></p>
                       </div>
                     </div>
