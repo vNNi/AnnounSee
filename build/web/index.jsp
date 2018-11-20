@@ -28,11 +28,61 @@ int i = 0,f=0,g=0;
     <body class="">
         <%@include file="navBar.jsp" %>
         <div class="banner valign-wrapper">
-                <div class="center-align container fundoBanner">
-                    <h3 class="resetMargin"> Seu novo lar, em um clique!</h3>
-                    <a class="waves-effect waves-light btn-large verdeEscuro" href="anuncie.jsp">ANUNCIE</a>
-                </div>
+            <div class="center-align container fundoBanner">
+                <h3 class="resetMargin"> Seu novo lar, em um clique!</h3>
+                <a class="waves-effect waves-light btn-large verdeEscuro" href="anuncie.jsp">ANUNCIE</a>
+            </div>
         </div>
+         <section class="container galeria">
+            <h4>Galeria</h4>
+            <div class="row">
+                <hr class="col s1 hrColor">
+                <br> 
+            </div>
+          <div class="carousel">
+                <a class="carousel-item" href="#one!" id="imgIndex"><img src="Assets/casa1.jpg"></a>
+                <a class="carousel-item" href="#three!" id="imgIndex"><img src="Assets/casa3.jpg"></a>
+                <a class="carousel-item" href="#four!" id="imgIndex"><img src="Assets/apartamento1.jpg"></a>
+                <a class="carousel-item" href="#five!" id="imgIndex"><img src="Assets/apartamento2.jpg"></a>
+          </div>
+        </section>
+        <section class="container services">
+                <h4>Serviços</h4>
+                <div class="row">
+                    <hr class="col s1 hrColor">
+                    <br> 
+                    <div class="col s12 m4 service">
+                        <div class="flex-center">
+                         <img src="./Assets/logos/house2.png">
+                        </div>
+                        <p class="center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel cursus mi, 
+                            a rutrum urna. In nec vehicula justo. In egestas, turpis nec 
+                            convallis vehicula, leo risus vulputate nulla, quis malesuada turpis eros et era
+                        </p>
+                    </div>
+                    <div class="col s12 m4 service">
+                        <div class="flex-center">
+                         <img src="./Assets/logos/loudspeaker.png">
+                        </div>
+                        <p class="services--subtitle center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel cursus mi, 
+                            a rutrum urna. In nec vehicula justo. In egestas, turpis nec 
+                            convallis vehicula, leo risus vulputate nulla, quis malesuada turpis eros et era
+                        </p>
+                    </div>
+                    <div class="col s12 m4 service">
+                        <div class="flex-center">
+                         <img src="./Assets/logos/contact.png">
+                        </div>
+                        <p class="services--subtitle center ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel cursus mi, 
+                            a rutrum urna. In nec vehicula justo. In egestas, turpis nec 
+                            convallis vehicula, leo risus vulputate nulla, quis malesuada turpis eros et era
+                        </p>
+                    </div>
+                </div>
+            </section>
         <section class="container">
             <h4>Apartamentos</h4>
                 <div class="row">
@@ -42,7 +92,7 @@ int i = 0,f=0,g=0;
                             for(Imovel ap:apartaments){ 
                             i++;
                         %>
-                    <div class="col s6 m4">  
+                    <div class="col s12 m4">  
                         <!-- Modal Structure -->
                 <div id="modal<%=ap.getId()%>" class="modal">
                   <div class="modal-content">
@@ -96,7 +146,7 @@ int i = 0,f=0,g=0;
                 for(Imovel c:casas){
                     f++;
                 %>
-                <div class="col s6 m4">
+                <div class="col s12 m4">
                 <!-- Modal Structure -->
                 <div id="modal<%=c.getId()%>" class="modal">
                   <div class="modal-content">
@@ -142,7 +192,7 @@ int i = 0,f=0,g=0;
                     <a class="waves-effect waves-light btn-small verdeEscuro" href="continueVendo.jsp?category=casa">Continue vendo</a>
             </div>
         </section>
-        <section class="container">
+        <section class="container outros">
             <h4>Outros</h4>
             <div class="row">
                 <hr class="col s1 hrColor">
@@ -151,7 +201,7 @@ int i = 0,f=0,g=0;
                     for(Imovel ot:outros){
                         g++;
                 %>
-                <div class="col s6 m4">
+                <div class="col s12 m4">
                 <div id="modal<%=ot.getId()%>" class="modal">
                   <div class="modal-content">
                     <div class="container">
@@ -194,20 +244,7 @@ int i = 0,f=0,g=0;
             <div class="center-align">
                 <a class="waves-effect waves-light btn-small verdeEscuro" href="continueVendo.jsp?category=outros">Continue vendo</a>
             </div>
-        </section>
-        <section class="container">
-            <h4>Galeria</h4>
-            <div class="row">
-            <hr class="off-setLeft col s1 hrColor">
-            </div>
-          <div class="carousel">
-                <a class="carousel-item" href="#one!" id="imgIndex"><img src="Assets/casa1.jpg"></a>
-                <a class="carousel-item" href="#two!" id="imgIndex"><img src="Assets/casa1.jpg"></a>
-                <a class="carousel-item" href="#three!" id="imgIndex"><img src="Assets/casa3.jpg"></a>
-                <a class="carousel-item" href="#four!" id="imgIndex"><img src="Assets/apartamento1.jpg"></a>
-                <a class="carousel-item" href="#five!" id="imgIndex"><img src="Assets/apartamento2.jpg"></a>
-          </div>
-        </section>
+        </section>    
         <%@include file="footer.jsp" %>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="Assets/js/materialize.js"></script>

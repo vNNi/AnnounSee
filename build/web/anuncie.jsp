@@ -9,7 +9,7 @@
  }
 %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html" language="java" pageEncoding="UTF-8" import="java.sql.*" errorPage="" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,7 +45,7 @@
             <hr class="off-setLeft col s1 hrColor">
             </div>
         <div class="row">
-            <form class="col s12" method="post" action="Anunciar2" enctype="multipart/form-data" accept-charset="UTF-8">
+            <form class="col s12" method="post" action="Anunciar2" enctype="multipart/form-data" accept-charset="iso-8859-1,utf-8">
               <div class="row">
                 <div class="input-field col s6">
                     <input name="bairro" id="first_name" type="text" class="validate" required>

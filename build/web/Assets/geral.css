@@ -142,3 +142,26 @@ height: 250px !important;
 .tituloModal{
     font-size: 1.4em;
 }
+.flex-center{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.service{
+    margin-top: 3.5em;
+}
+.services{
+    margin-bottom: 3.5em;
+}
+.galeria{
+    margin-top: 3.5em;
+}
+.outros{
+    margin-bottom: 6em;
+}
+.btn{
+    background-color: #66bb6a;
+}
+.btn:hover{
+    background-color: #66bb8a;
+}

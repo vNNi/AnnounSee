@@ -31,6 +31,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Vinic
  */
+
 @WebServlet(name = "Anunciar2", urlPatterns = "/Anunciar2")
 public class Anunciar2 extends HttpServlet{
     int idUsu=0,result;
