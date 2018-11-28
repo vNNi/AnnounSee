@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controllers;
+package announsee.controllers;
 
 import announsee.DAO.ImovelDAO;
 import announsee.Models.Imovel;

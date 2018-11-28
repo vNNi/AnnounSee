@@ -56,9 +56,8 @@ int i = 0,f=0,g=0;
                          <img src="./Assets/logos/house2.png">
                         </div>
                         <p class="center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel cursus mi, 
-                            a rutrum urna. In nec vehicula justo. In egestas, turpis nec 
-                            convallis vehicula, leo risus vulputate nulla, quis malesuada turpis eros et era
+                            Seu próximo lar, na palma de sua mão! Diversas opções para você
+                            escolher e o melhor, tudo sem comprimisso, sem criar conta!
                         </p>
                     </div>
                     <div class="col s12 m4 service">
@@ -66,9 +65,8 @@ int i = 0,f=0,g=0;
                          <img src="./Assets/logos/loudspeaker.png">
                         </div>
                         <p class="services--subtitle center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel cursus mi, 
-                            a rutrum urna. In nec vehicula justo. In egestas, turpis nec 
-                            convallis vehicula, leo risus vulputate nulla, quis malesuada turpis eros et era
+                            Anuncie fácilmente seu imóvel, seja ele onde for, independente do serviço, seja 
+                            aluguel ou venda, tudo por conta própria! Aqui é a melhor vitrine para seus compradores.
                         </p>
                     </div>
                     <div class="col s12 m4 service">
@@ -76,9 +74,9 @@ int i = 0,f=0,g=0;
                          <img src="./Assets/logos/contact.png">
                         </div>
                         <p class="services--subtitle center ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel cursus mi, 
-                            a rutrum urna. In nec vehicula justo. In egestas, turpis nec 
-                            convallis vehicula, leo risus vulputate nulla, quis malesuada turpis eros et era
+                            Nos baseamos na idéia de corrente, construímos a conexão entre os imóveis e quem procura,
+                            tornando fácil para ambos se encontrarem, dando todo tipo de informação necessária para essa 
+                            interação acontecer!
                         </p>
                     </div>
                 </div>
